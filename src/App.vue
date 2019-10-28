@@ -13,7 +13,7 @@
 		 <router-link  to="/about"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>关于慧点</p></van-col></router-link>
 		 <router-link  to="/master"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>师资专家</p></van-col></router-link>
 		 <router-link  to="/java"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Java企业级开发</p></van-col></router-link>
-		 <router-link  to="/php"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Php全栈开发</p></van-col></router-link>
+		 <router-link  to="/php"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>PHP全栈开发</p></van-col></router-link>
 		 <router-link  to="/web"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Web全栈开发</p></van-col></router-link>
 		 <router-link  to="/bigshuju"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>大数据开发</p></van-col></router-link>
 		 <router-link  to="/python"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Python人工智能</p></van-col></router-link>

@@ -18,7 +18,7 @@ axios.interceptors.response.use(function(response) {
 // 封装axios的post请求，get请求一样
 export function fetchPOST(url, params) {
   return new Promise((resolve, reject) => {
-    axios.post(url, params)
+    axios.post("https://www.huidianedu.com/public/api/index"+url, params)
       .then(response => {
         resolve(response.data);
       })

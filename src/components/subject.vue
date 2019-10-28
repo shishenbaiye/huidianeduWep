@@ -40,6 +40,9 @@
 				methods: {
 				
 				},
+				mounted(){
+					
+				},
 			  name: 'subject',
 			  props: {
 			  msg: String

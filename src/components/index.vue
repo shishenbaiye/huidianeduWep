@@ -191,6 +191,13 @@ import api from '../api.js'
 						this.$toast("电话不能为空！")
 						return false;
 					}
+					api.$httpPOST("/usermes",{
+						name:this.name,
+						phone:this.phone,
+						subject:this.subject
+					}).then(res=>{
+						console.log(res)
+					})
 					/**/
 					Toast.success('   提交成功， 感谢您的咨询！');
 				}
