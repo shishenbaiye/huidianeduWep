@@ -10,12 +10,12 @@
 			<van-row class="environment-subtitle">良好的环境是学员学有所成的基础</van-row>
 			<van-col class="subject-index-about" type="flex">
 				<van-row class="subject-index-row" type="flex" justify="space-around">
-					<van-image class="subject-index-row-img" src="https://www.huidianedu.com/wep/about/abouthj01.png" />
-					<van-image class="subject-index-row-img" src="https://www.huidianedu.com/wep/about/abouthj02.png" />
+					<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/about/abouthj01.png" />
+					<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/about/abouthj02.png" />
 				</van-row>
 				<van-row class="subject-index-row" type="flex" justify="space-around">
-					<van-image class="subject-index-row-img" src="https://www.huidianedu.com/wep/about/abouthj03.png" />
-					<van-image class="subject-index-row-img" src="https://www.huidianedu.com/wep/about/abouthj04.png" />
+					<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/about/abouthj03.png" />
+					<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/about/abouthj04.png" />
 				</van-row>
 			</van-col>
 		</van-col>
@@ -23,7 +23,7 @@
 		<van-col class="develop" type="flex" span="24" align="center">
 			<van-row class="develop-title">发展历程</van-row>
 			<van-row class="develop-subtitle">慧点科技缔造一站式人才输送平台</van-row>
-			<van-image class="develop-img" width="82%" src="https://www.huidianedu.com/wep/about/abouttext.png"></van-image>
+			<van-image class="develop-img" width="82%" src="http://m.huidianedu.com/wep/about/abouttext.png"></van-image>
 		</van-col>
 	</div>
 </template>

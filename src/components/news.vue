@@ -6,7 +6,7 @@
 			<!-- 1 -->
 			<van-row class="news-line" type="flex" align="center">
 				<div class="news-line-img" ref="imgHeight" >
-					<van-image src="https://www.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
+					<van-image src="http://m.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
 				</div>
 				<van-col class="news-line-index" v-bind:style="{ height : height + 'px' }">
 					<van-col class="news-line-index-line" type="flex">
@@ -19,7 +19,7 @@
 			<!-- 2 -->
 			<van-row class="news-line" type="flex" align="center">
 				<div class="news-line-img" ref="imgHeight" >
-					<van-image src="https://www.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
+					<van-image src="http://m.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
 				</div>
 				<van-col class="news-line-index" v-bind:style="{ height : height + 'px' }">
 					<van-col class="news-line-index-line" type="flex">
@@ -31,7 +31,7 @@
 			</van-row>
 			<van-row class="news-line" type="flex" align="center">
 				<div class="news-line-img" ref="imgHeight" >
-					<van-image src="https://www.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
+					<van-image src="http://m.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
 				</div>
 				<van-col class="news-line-index" v-bind:style="{ height : height + 'px' }">
 					<van-col class="news-line-index-line" type="flex">
@@ -43,7 +43,7 @@
 			</van-row>
 			<van-row class="news-line" type="flex" align="center">
 				<div class="news-line-img" ref="imgHeight" >
-					<van-image src="https://www.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
+					<van-image src="http://m.huidianedu.com/wep/about/news1.png" style="height: 100%;width: 100%;margin-top: 10%;margin-bottom: 5%;"></van-image>
 				</div>
 				<van-col class="news-line-index" v-bind:style="{ height : height + 'px' }">
 					<van-col class="news-line-index-line" type="flex">

@@ -67,7 +67,7 @@
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
 				<van-row class="teacher-line" type="flex">
-					<van-image class="teacher-img" src="https://www.huidianedu.com/wep/003.png"></van-image>
+					<van-image class="teacher-img" src="http://m.huidianedu.com/wep/003.png"></van-image>
 					<van-col class="teacher-index">
 						<van-row class="teacher-index-name">张双飞  C C++ Java Python</van-row>
 						<van-row class="teacher-index-introduct">十年软年开发经验，资深软件架构师。曾参与过中国联通WCDMA七省综合网管系统、中国联通GSM电信网管系统数据同步器、展讯平台手机虚拟机、中国移动 IVVR 平台手机T9输入法等众多大型项目</van-row>

@@ -43,16 +43,16 @@
 			</van-row>
 			<van-col class="subject-index" type="flex">
 				<van-row class="subject-index-row" type="flex" justify="space-around">
-					<router-link to="/java"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/java.png" /></router-link>
-					<router-link to="/web"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/web.png" /></router-link>
+					<router-link to="/java"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/java.png" /></router-link>
+					<router-link to="/web"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/web.png" /></router-link>
 				</van-row>
 				<van-row class="subject-index-row" type="flex" justify="space-around">
-					<router-link to="/ui"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/ui.png" />	</router-link>
-					<router-link to="/python"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/PYthon.png" /></router-link>
+					<router-link to="/ui"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/ui.png" />	</router-link>
+					<router-link to="/python"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/PYthon.png" /></router-link>
 				</van-row>
 				<van-row class="subject-index-row" type="flex" justify="space-around">
-					<router-link to="/bigshuju"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/bigshuju.png" /></router-link>
-					<router-link to="/php"><van-image class="subject-index-row-imga" src="https://www.huidianedu.com/wep/PHP.png" /></router-link>
+					<router-link to="/bigshuju"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/bigshuju.png" /></router-link>
+					<router-link to="/php"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/PHP.png" /></router-link>
 				</van-row>
 			</van-col>
 		</van-col>
@@ -70,14 +70,14 @@
 			</van-row>
 			<van-swipe :autoplay="3000" indicator-color="white" class="master-swiper">
 			  <van-swipe-item class="master-swiper-item">
-					  <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/001.png"/>  
-					  <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/002.png" />
-					  <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/003.png" />
+					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/001.png"/>  
+					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/002.png" />
+					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/003.png" />
 			  </van-swipe-item>
 			  <van-swipe-item class="master-swiper-item"> 
-			      <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/001.png"/>
-				  <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/002.png" />
-				  <van-image class="master-swiper-img" src="https://www.huidianedu.com/wep/003.png" />
+			      <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/001.png"/>
+				  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/002.png" />
+				  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/003.png" />
 			  </van-swipe-item>
 			</van-swipe>
 		</van-col>
@@ -85,17 +85,17 @@
 		<van-col class="table">
 			<van-row class="table-title">立即在线咨询</van-row>
 			<van-row class="table-line" type="flex" align="center" @click="nameInput">
-				<van-image class="table-line-img" src="https://www.huidianedu.com/wep/3.png" fit="contain" v-if="stateName"/>
+				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/3.png" fit="contain" v-if="stateName"/>
 				<van-row class="table-line-text" v-if="stateName">姓名</van-row>
 				<input class="table-line-input" v-if="inputName" v-model="name"/>
 			</van-row>
 			<van-row class="table-line" type="flex" align="center" @click="subjectInput">
-				<van-image class="table-line-img" src="https://www.huidianedu.com/wep/4.png" fit="contain" v-if="stateSubject"/>
+				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/4.png" fit="contain" v-if="stateSubject"/>
 				<van-row class="table-line-text" v-if="stateSubject">咨询课程</van-row>
 				<input class="table-line-input" v-if="inputSubject" v-model="subject"/>
 			</van-row>
 			<van-row class="table-line" type="flex" align="center" @click="phoneInput">
-				<van-image class="table-line-img" src="https://www.huidianedu.com/wep/5.png" fit="contain" v-if="statePhone"/>
+				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/5.png" fit="contain" v-if="statePhone"/>
 				<van-row class="table-line-text" v-if="statePhone">联系电话</van-row>
 				<input class="table-line-input" v-if="inputPhone" v-model="phone"/>
 			</van-row>
