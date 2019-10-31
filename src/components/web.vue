@@ -15,19 +15,19 @@
 					<van-col type="flex" align="center" class="php-line-index" style="margin-left: 1.7%;">
 						<img class="php-img" src="../assets/web/002.png"/>
 						<van-row class="php-line-index-title">互联网解决方案</van-row>
-						<van-row class="php-line-index-subtitle"> 学习服务器数据库知识， 同时教授热门互联网解 决方案相关知识 </van-row>
+						<van-row class="php-line-index-subtitle"> 学习服务器数据库知识，同时教授热门互联网解决方案相关知识 </van-row>
 					</van-col>
 				</van-row>
 				<van-row type="flex" justify="center" class="php-line">
 					<van-col type="flex" align="center" class="php-line-index" style="margin-right: 1.7%;">
 						<img class="php-img" src="../assets/web/003.png"/>
 						<van-row class="php-line-index-title">JS框架与开发环境</van-row>
-						<van-row class="php-line-index-subtitle"> 深入学习各种JS框架， 实战中学习分布式/集 群式代码托管平台 </van-row>
+						<van-row class="php-line-index-subtitle"> 深入学习各种JS框架，实战中学习分布式/集群式代码托管平台 </van-row>
 					</van-col>
 					<van-col type="flex" align="center" class="php-line-index" style="margin-left: 1.7%;">
 						<img class="php-img" src="../assets/web/004.png"/>
 						<van-row class="php-line-index-title">微信相关开发课程</van-row>
-						<van-row class="php-line-index-subtitle"> 微信网页授权，JSSDK ，地理微信支付，微信 卡券，小程序开发等 </van-row>
+						<van-row class="php-line-index-subtitle"> 微信网页授权，JSSDK，地理微信支付，微信卡券，小程序开发等 </van-row>
 					</van-col>
 				</van-row>
 			</div >
@@ -40,7 +40,7 @@
 				<van-col class="tree-index">
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-title">教学模式</van-row>
-						<van-row class="tree-index-line-subtitle">率先采用独创的ptrn教学模式，以一线互联网企业的真 实项目案例驱动教学 </van-row>
+						<van-row class="tree-index-line-subtitle">率先采用独创的PTRN教学模式，以一线互联网企业的真 实项目案例驱动教学 </van-row>
 					</van-row>
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-subtitle2"> web全栈课程体系由慧点教研团队精心调研而成，紧随行业发展需求，全程商业项目驱动教学。 </van-row>
@@ -62,6 +62,7 @@
 					<van-row class="php-title" style="margin-top:5.5%;">慧点WEB全栈讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -69,6 +70,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>
@@ -114,7 +116,7 @@
 				api.$httpPOST("/master",{
 					position:1
 				}).then(res=>{
-					this.master=res.data[0];
+					this.master=res.data[1];
 				})
 			},
 		  name: 'web',

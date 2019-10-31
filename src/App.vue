@@ -9,15 +9,76 @@
 		  <img @click="menu" class="header-menu" src="./assets/menu.png"/>
 	  </van-row>
 	  <van-popup v-model="show" position="right" :style="{ height: '100%' ,width:'46.53%' ,'z-index':'9999'}" type="flex">
-		 <router-link  to="/"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>慧点首页</p></van-col></router-link>
-		 <router-link  to="/about"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>关于慧点</p></van-col></router-link>
-		 <router-link  to="/master"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>师资专家</p></van-col></router-link>
-		 <router-link  to="/java"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Java企业级开发</p></van-col></router-link>
-		 <router-link  to="/php"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>PHP全栈开发</p></van-col></router-link>
-		 <router-link  to="/web"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Web全栈开发</p></van-col></router-link>
-		 <router-link  to="/bigshuju"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>大数据开发</p></van-col></router-link>
-		 <router-link  to="/python"><van-col class="popup-font" justify="center" align="center" @click='click_menu'><p>Python人工智能</p></van-col></router-link>
-		 <router-link  to="/ui"><van-col class="popup-font" justify="center" align="center"@click='click_menu'><p>UI/UE设计</p></van-col></router-link>
+		 <router-link  to="/">
+			 <van-button 
+			 justify="center" 
+			 align="center" 
+			 @click='click_menu'
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;">慧点首页</van-button>
+		 </router-link>
+		 <router-link  to="/about">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>关于慧点</van-button >		 
+		 </router-link>
+		 <router-link  to="/master">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>师资专家</van-button >
+		 </router-link>
+		 <router-link  to="/java">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>Java企业级开发</van-button >
+		 </router-link>
+		 <router-link  to="/php">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 align="center" @click='click_menu'>PHP全栈开发</van-button >
+		 </router-link>
+		 <router-link  to="/web">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>Web全栈开发</van-button >
+		 </router-link>
+		 <router-link  to="/bigshuju">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>大数据开发</van-button >
+		 </router-link>
+		 <router-link  to="/python">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center" 
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>Python人工智能</van-button >
+		 </router-link>
+		 <router-link  to="/ui">
+			 <van-button  
+			 class="popup-font" 
+			 justify="center" 
+			 align="center"
+			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+			 @click='click_menu'>UI/UE设计</van-button >
+		 </router-link>
 	  </van-popup>
 	  <!-- 
 	  <subject msg="精品课程"/>
@@ -26,7 +87,7 @@
 	
     <van-col class="footer" type="flex" align="center">
 		<van-row class="footer-local" type="flex"><img class="footer-img" src="./assets/IP.png"/>郑州高新区科学大道中原广告产业园7号楼4层</van-row>
-		<van-row class="footer-phone" type="flex"><img class="footer-img" src="./assets/phone.png"/>0371-6668868</van-row>
+		<van-row class="footer-phone" type="flex"><img class="footer-img" src="./assets/phone.png"/>0371-56111301</van-row>
 		<van-row class="line"></van-row>	
 		<van-row class="footer-icp" type="flex" justify="center">Copyright ©2014 版权所有 ICP备案：豫ICP备19031280</van-row>
 	</van-col>

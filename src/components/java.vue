@@ -9,12 +9,12 @@
 				<van-row type="flex" justify="center" class="php-line">
 					<van-col type="flex" align="center" class="php-line-index" style="margin-right: 1.7%;">
 						<img class="php-img" src="../assets/java/001.png"/>
-						<van-row class="php-line-index-title">JAVA基础</van-row>
+						<van-row class="php-line-index-title">Java基础</van-row>
 						<van-row class="php-line-index-subtitle"> 深入了解java运行原理 和操作，教学深入浅出 ，直击诸多面试问题 </van-row>
 					</van-col>
 					<van-col type="flex" align="center" class="php-line-index" style="margin-left: 1.7%;">
 						<img class="php-img" src="../assets/java/002.png"/>
-						<van-row class="php-line-index-title">Javaee开发</van-row>
+						<van-row class="php-line-index-title">JavaEE开发</van-row>
 						<van-row class="php-line-index-subtitle"> 数据库内容，html5,c ss,js语法,各种js的前端 框架，JSP等精讲 </van-row>
 					</van-col>
 				</van-row>
@@ -27,14 +27,14 @@
 					<van-col type="flex" align="center" class="php-line-index" style="margin-left: 1.7%;">
 						<img class="php-img" src="../assets/java/004.png"/>
 						<van-row class="php-line-index-title">互联网解决方案</van-row>
-						<van-row class="php-line-index-subtitle"> 教授诸多互联网产品中 前沿流行技术，如：高 级mysql；jvm原理等 </van-row>
+						<van-row class="php-line-index-subtitle"> 教授诸多互联网产品中前沿流行技术，如：高级mysql；jvm原理等 </van-row>
 					</van-col>
 				</van-row>
 			</div >
 			<!-- 为什么学java -->
 			<van-col class="why">
 				<van-col class="tree-title">
-					<van-row class="php-title" style="margin-top:5.5%;">为什么要学习JAVA</van-row>
+					<van-row class="php-title" style="margin-top:5.5%;">为什么要学习Java</van-row>
 					<van-row class="php-subtitle">Java语言连续多年成为最受欢迎的编程语言</van-row>
 				</van-col>
 				<van-col class="why-index">
@@ -66,6 +66,7 @@
 					<van-row class="php-title" style="margin-top:5.5%;">慧点Java讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -73,6 +74,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>

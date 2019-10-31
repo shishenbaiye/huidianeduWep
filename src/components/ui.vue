@@ -59,9 +59,10 @@
 			<!-- 老师 -->
 			<van-col class="teacher" type="flex" align="center">
 				<van-col class="tree-title">
-					<van-row class="php-title" style="margin-top:5.5%;">慧点大数据讲师</van-row>
+					<van-row class="php-title" style="margin-top:5.5%;">慧点UI讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -69,6 +70,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>

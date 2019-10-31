@@ -1,5 +1,5 @@
 <template>
-	<div class="bigshuju" >
+	<div class="bigshuju" ref="bigshuju" >
 		<img src="../assets/bigshuju/banner.png" class="banner" />
 		<van-col class="php-index" type="flex">
 			<van-row class="php-title">大数据应用领域</van-row>
@@ -66,6 +66,7 @@
 					<van-row class="php-title" style="margin-top:5.5%;">慧点大数据讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -73,6 +74,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>
@@ -108,9 +110,9 @@
 					api.$httpPOST("/master",{
 						position:4
 					}).then(res=>{
-						this.master=res.data[0];
+						this.master=res.data[1];
 					})
-					let wid = this.$refs.java.offsetWidth;
+					let wid = this.$refs.bigshuju.offsetWidth;
 					if(wid>=393){
 						this.classFont.teacherIndexIntroduct=false;
 						this.classFont.teacherIndexIntroduct1080p=true;
@@ -126,49 +128,5 @@
 </script>
 
 <style>
-.why{
-	width: 100%;
-	background-color: #f5f6fd;
-}
-.why-index{
-	margin-top:2.3125rem;
-	width: 100%;
-}
-.why-line{
-	margin-top:0.5rem;
-	width: 100%;
-}
-.why-line-index{
-	width: 44.5%;
-	background:rgba(255,255,255,1);
-	box-shadow:0px 0px 10px 0px rgba(19,24,126,0.16);
-	border-radius:4px;
-	margin-bottom: 2rem;
-}
-.why-line-index-title{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top:-15px;
-	height: 2rem;
-	width: 6.8125rem;
-	background:rgba(253,126,23,1);
-	border-radius:8px;
-	font-size:15px;
-	font-family:FZLanTingHei-R-GBK;
-	font-weight:400;
-	color:rgba(255,255,255,1);
-	line-height:25px;
-}
-.why-line-index-nr{
-	text-align: left;
-	margin-top:17px;
-	margin-bottom: 22px;
-	width: 81%;
-	font-size:12px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:20px;
-}
+
 </style>

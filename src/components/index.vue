@@ -38,7 +38,7 @@
 			<van-row class="subject-title" type="flex" justify="space-between" align="center">
 				<van-row span='6'>六大精品课程</van-row>
 				<van-row span='6' type="flex" align="center" style="font-size: 0.8125rem;color: #666666;">
-					<img class='sub-img' src="../assets/index/hot.png"/>火热报名中
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=1570915261&site=qq&menu=yes" class="sub-a"><img class='sub-img' src="../assets/index/hot.png"/>火热报名中</a>
 				</van-row>
 			</van-row>
 			<van-col class="subject-index" type="flex">
@@ -68,36 +68,31 @@
 				</van-row>
 				</router-link>
 			</van-row>
-			<van-swipe :autoplay="3000" indicator-color="white" class="master-swiper">
-			  <van-swipe-item class="master-swiper-item">
-					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/001.png"/>  
-					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/002.png" />
-					  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/003.png" />
-			  </van-swipe-item>
-			  <van-swipe-item class="master-swiper-item"> 
-			      <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/001.png"/>
-				  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/002.png" />
-				  <van-image class="master-swiper-img" src="http://m.huidianedu.com/wep/003.png" />
+			
+			<router-link to="/master">
+			<van-swipe :autoplay="2000"  class="master-swiper" @change="onChange" >
+			  <van-swipe-item class="master-swiper-item" v-for="item in master" >
+				 <van-image class="master-swiper-img" :src="item[0].image"/>
+				 <van-image class="master-swiper-img" :src="item[1].image"/>  
+				 <van-image class="master-swiper-img" :src="item[2].image"/>  
 			  </van-swipe-item>
 			</van-swipe>
+			</router-link>
 		</van-col>
 		<!-- 提交咨询 -->
 		<van-col class="table">
 			<van-row class="table-title">立即在线咨询</van-row>
-			<van-row class="table-line" type="flex" align="center" @click="nameInput">
+			<van-row class="table-line" type="flex" align="center" >
 				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/3.png" fit="contain" v-if="stateName"/>
-				<van-row class="table-line-text" v-if="stateName">姓名</van-row>
-				<input class="table-line-input" v-if="inputName" v-model="name"/>
+				<input class="table-line-input" placeholder="姓名"  v-model="name"/>
 			</van-row>
-			<van-row class="table-line" type="flex" align="center" @click="subjectInput">
+			<van-row class="table-line" type="flex" align="center" >
 				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/4.png" fit="contain" v-if="stateSubject"/>
-				<van-row class="table-line-text" v-if="stateSubject">咨询课程</van-row>
-				<input class="table-line-input" v-if="inputSubject" v-model="subject"/>
+				<input class="table-line-input" placeholder="咨询课程"  v-model="subject"/>
 			</van-row>
-			<van-row class="table-line" type="flex" align="center" @click="phoneInput">
+			<van-row class="table-line" type="flex" align="center" >
 				<van-image class="table-line-img" src="http://m.huidianedu.com/wep/5.png" fit="contain" v-if="statePhone"/>
-				<van-row class="table-line-text" v-if="statePhone">联系电话</van-row>
-				<input class="table-line-input" v-if="inputPhone" v-model="phone"/>
+				<input class="table-line-input" placeholder="联系电话"  v-model="phone"/>
 			</van-row>
 			<van-row class="table-line-btn" type="flex" align="center" justify="center" style="margin-bottom:1.5rem;">
 				<van-button type="warning" class="table-line-btn" style="font-size:18px;border:0;border-radius: 4px; background-color:#FE8D1F;width: 100%;margin-top:0;" @click="tablePost">提交咨询</van-button>
@@ -115,7 +110,8 @@ import { Image } from 'vant';
 import { Row, Col } from 'vant';
 import { Field } from 'vant';
 import { Toast } from 'vant';
-import api from '../api.js' 
+import api from '../api.js';
+
 
 	export default{
 		components:{
@@ -126,9 +122,6 @@ import api from '../api.js'
 							stateName:true,
 							stateSubject:true,
 							statePhone:true,
-							inputName:false,
-							inputSubject:false,
-							inputPhone:false,
 							name:null,
 							subject:null,
 							phone:null,
@@ -137,11 +130,11 @@ import api from '../api.js'
 							    midfont: true,
 							    midfont1080p: false
 							},
+							master:{}
 			            }
 			        },
 					created() {
 						
-						// a
 					},
 			mounted(){
 				api.$httpGET("/lunbo",{})
@@ -156,27 +149,28 @@ import api from '../api.js'
 					this.midFont.midfont=false;
 					this.midFont.midfont1080p=true;
 				}
-				// .then(res=>{
-				// 	this.masterimg = res.data
-				// }).catch(err => {
+				
+				api.$httpPOST("/masterAll",{
+					num:7
+				})
+				.then(res=>{
+					this.master=res.data	
+				}).catch(err => {
 					
-				// })
+				})
+				
 			},
 			methods: {
-				pay(){
-					console.log("点击成功")
+				qqsj(){
 				},
-				nameInput(){
-					this.stateName=false;
-					this.inputName=true
-				},
-				subjectInput(){
-					this.stateSubject=false;
-					this.inputSubject=true
-				},
-				phoneInput(){
-					this.statePhone=false;
-					this.inputPhone=true
+				onChange(index) {
+					// console.log('当前 Swipe 索引：' + index);
+					// var xxx = document.getElementsByClassName("van-swipe__indicators")
+					// console.log(xxx)
+						
+					// for (var i = 0; i < xxx.length; i++){
+					// 	xxx[i].style.backgroundColor = "red"
+					// }
 				},
 				tablePost(){
 					if(this.name==null){
@@ -191,15 +185,25 @@ import api from '../api.js'
 						this.$toast("电话不能为空！")
 						return false;
 					}
+					if(!(/^1[3456789]\d{9}$/.test(this.phone))){
+					       this.$toast("手机号码有误，请重填");  
+					       return false; 
+					} 
+					if(!(/^[\u2E80-\u9FFF]+$/.test(this.name))){
+					       this.$toast("姓名有误，请输入汉字!");  
+					       return false; 
+					}
 					api.$httpPOST("/usermes",{
 						name:this.name,
 						phone:this.phone,
 						subject:this.subject
 					}).then(res=>{
-						console.log(res)
+						this.name = null;
+						this.phone = null;
+						this.subject = null;
 					})
 					/**/
-					Toast.success('   提交成功， 感谢您的咨询！');
+					Toast.success(' 提交成功！');
 				}
 			},
 		  name: 'index',
@@ -207,6 +211,9 @@ import api from '../api.js'
 		  msg: String
 		}
 	}
+	
+	
+	
 </script>
 
 <style>
@@ -268,6 +275,11 @@ import api from '../api.js'
 .subject-index{
 	width: 100%;
 }
+.sub-a{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 .subject-index-row{
 	width: 96%;
 	padding: 0 2%;
@@ -278,7 +290,7 @@ import api from '../api.js'
 }
 .master{
 	width: 100%;
-	margin-bottom: 1.375rem;
+	
 }
 .master-img{
 	width:0.5rem;
@@ -295,6 +307,7 @@ import api from '../api.js'
 .master-swiper-img{
 	width:29.33% ;
 	border-radius: 0.3125rem;
+	margin-bottom: 8%;
 }
 .master-swiper-cover{
 	height: 2.875rem;
@@ -373,7 +386,7 @@ import api from '../api.js'
 }
 .introduct-text{
 	margin-top: 2%;
-	text-align: left;
+	text-align: justify;
 	width: 86%;
 	height: 63.64%;
 	line-height: 1.2rem;
@@ -450,7 +463,8 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(51,51,51,1);
 	line-height:17px;
-	text-align: left;
+	text-align: justify;
+	text-justify: inter-ideograph;
 }
 .qiye{
 	width: 100%;
@@ -464,7 +478,7 @@ import api from '../api.js'
 	color:rgba(102,102,102,1);
 	line-height:18px;
 	margin: 18px;
-	text-align: left;
+	text-align: justify;
 }
 .qiye-img{
 	width: 100%;
@@ -472,10 +486,13 @@ import api from '../api.js'
 }
 .qiye-img-line{
 	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
 }
 .qiye-img-line-index{
 	width: 33%;
-	margin: 0 0.15%;
+	margin: 0.15% 0.15%;
 }
 .Master{
 	width: 100%;
@@ -536,7 +553,8 @@ import api from '../api.js'
 	color: #666666;
 	font-size: 0.85rem;
 	line-height: 1.125rem;
-	text-align: left;
+	text-align: justify;
+	text-justify: inter-ideograph;
 	font-weight: 400;
 }
 .php-img{
@@ -579,7 +597,7 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(102,102,102,1);
 	line-height:18px;
-	text-align: left;
+	text-align: justify;
 	margin-right: 3%;
 }
 .tree-index-line-title2{
@@ -597,8 +615,8 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(102,102,102,1);
 	line-height:18px;
-	text-align: left;
-	margin-left: 5%;
+	text-align: justify;
+	margin-left: 3%;
 }
 .teacher{
 	width: 100%;
@@ -625,26 +643,6 @@ import api from '../api.js'
 	line-height:1.9375rem;
 	margin-top: 3%;
 }
-.teacher-index-introduct{
-	width: 90%;
-	font-size:11px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
-.teacher-index-introduct1080p{
-	width: 90%;
-	font-size:13px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
 .teacherIndexIntroduct{
 	width: 90%;
 	font-size:11px;
@@ -652,8 +650,8 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(102,102,102,1);
 	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
+	margin:3px 0;
+	text-align: justify;
 }
 .teacherIndexIntroduct1080p{
 	width: 90%;
@@ -662,8 +660,8 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(102,102,102,1);
 	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
+	margin:3px 0;
+	text-align: justify;
 }
 .python{
 	display: flex;
@@ -704,7 +702,7 @@ import api from '../api.js'
 	line-height:25px;
 }
 .why-line-index-nr{
-	text-align: left;
+	text-align: justify;
 	margin-top:17px;
 	margin-bottom: 22px;
 	width: 81%;
@@ -713,5 +711,9 @@ import api from '../api.js'
 	font-weight:400;
 	color:rgba(102,102,102,1);
 	line-height:20px;
+}
+::-webkit-input-placeholder{
+	color: #A6BDFE;
+	font-size: 0.9375rem;
 }
 </style>

@@ -7,16 +7,16 @@
 		<!-- 精品课程-->
 		<van-col class="subject-index" type="flex" style="margin-top: 1.875rem; margin-bottom: 0.9375rem;">
 			<van-row class="subject-index-row" type="flex" justify="space-around">
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/java.png" />
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/web.png" />
+				<router-link to="/java"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/java.png" /></router-link>
+				<router-link to="/web"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/web.png" /></router-link>
 			</van-row>
 			<van-row class="subject-index-row" type="flex" justify="space-around">
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/ui.png" />
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/PYthon.png" />
+				<router-link to="/ui"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/ui.png" /></router-link>
+				<router-link to="/python"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/PYthon.png" /></router-link>
 			</van-row>
 			<van-row class="subject-index-row" type="flex" justify="space-around">
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/bigshuju.png" />
-				<van-image class="subject-index-row-img" src="http://m.huidianedu.com/wep/PHP.png" />
+				<router-link to="/bigshuju"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/bigshuju.png" /></router-link>
+				<router-link to="/php"><van-image class="subject-index-row-imga" src="http://m.huidianedu.com/wep/PHP.png" /></router-link>
 			</van-row>
 		</van-col>
 	</div>

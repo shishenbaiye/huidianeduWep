@@ -8,7 +8,7 @@
 			<van-row class="baozhang-index-tree" type="flex" justify="space-around">
 				<van-col class="baozhang-index-tree-line" style="margin-top: 22px;margin-left: 5%;">
 					<van-image class="baozhang-index-img" src="http://m.huidianedu.com/wep/jiuye/001.png"></van-image>
-					<van-row class="baozhang-index-text">签订法律鉴定就 业协议，维权零 难度不按承诺标 准就业可申请退 还全部认证费用 </van-row>
+					<van-row class="baozhang-index-text">签订法律鉴定就业协议，维权零难度不按承诺标准就业可申请退还全部认证费用 </van-row>
 				</van-col>
 				<van-col  class="baozhang-index-tree-line">
 					<van-image class="baozhang-index-img" src="http://m.huidianedu.com/wep/jiuye/002.png"></van-image>
@@ -24,8 +24,8 @@
 		<van-col class="qiye" type="flex" align="center">
 			<van-row class="php-title">就业企业</van-row>
 			<van-row class="qiye-subtitle">学员多在百度、腾讯、阿里巴巴、IBM等一线名企就业，同时公司在多个一线城市派有专人负责就业工作，截至到2019年9月公司合作企业超过1000家。</van-row>
-			<van-col class="qiye-img" type="flex" align="center">
-				<van-row class="qiye-img-line">
+			<div class="qiye-img" >
+				<div class="qiye-img-line">
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj01.png"></van-image>
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj02.png"></van-image>
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj03.png"></van-image>
@@ -35,8 +35,8 @@
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj07.png"></van-image>
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj08.png"></van-image>
 					<van-image class="qiye-img-line-index" src="http://m.huidianedu.com/wep/jiuye/lj10.png"></van-image>
-				</van-row>
-			</van-col>
+				</div>
+			</div>
 		</van-col>
 	</div>
 </template>
@@ -74,59 +74,5 @@
 </script>
 
 <style>
-.baozhang-index{
-	width: 100%;
-	margin-bottom: 1.875rem;
-}
-.baozhang-index-tree{
-	margin-top: 26px;
-}
-.baozhang-index-tree-line{
-	width: 23.33%;
-}
-.baozhang-index-img{
-	
-}
-.baozhang-index-text{
-	padding: 10%;
-	width: 80%;
-	background:rgba(255,255,255,1);
-	border:1px solid rgba(238,238,238,1);
-	border-radius:5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size:12px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(51,51,51,1);
-	line-height:17px;
-	text-align: left;
-}
-.qiye{
-	width: 100%;
-	background-color: #f8f8f8;
-}
-.qiye-subtitle{
-	width: 85.7%;
-	font-size:12px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:18px;
-	margin: 18px;
-	text-align: left;
-}
-.qiye-img{
-	width: 100%;
-	margin-bottom: 38px;
-}
-.qiye-img-line{
-	width: 90%;
-}
-.qiye-img-line-index{
-	width: 33%;
-	margin: 0 0.15%;
-}
 
 </style>

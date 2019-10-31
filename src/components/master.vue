@@ -12,6 +12,9 @@
 				<van-row v-bind:class="classFont">{{item.introduction}}</van-row>
 			</van-col>
 		</van-row>
+		<div class='popContainer' v-if="mshow">
+			<van-loading size="24px">加载中...</van-loading>
+		</div>
 	</div>
 </template>
 
@@ -23,6 +26,10 @@
 	import { Image } from 'vant';
 	import { Row, Col } from 'vant';
 	import { Field } from 'vant'; 
+	import { Popup } from 'vant';
+	import { Loading } from 'vant';
+	import { Overlay } from 'vant';
+
 	import api from '../api.js' 
 		export default{
 			components:{
@@ -34,7 +41,8 @@
 								    teacherIndexIntroduct: true,
 								    teacherIndexIntroduct1080p: false
 								},
-								master:{}
+								master:{},
+								mshow:true
 				            }
 				        },
 				created(){
@@ -48,7 +56,7 @@
 					     console.log(res.data);
 						 let master = res.data;
 						 this.master = master;
-						 
+						 this.mshow = false;
 					}).catch(err => {
 					
 					})
@@ -89,5 +97,17 @@
 }
 .Master-img{
 	width: 30%;
+}
+.popContainer{
+        position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 999999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    background: rgba(0,0,0,0.8);
 }
 </style>

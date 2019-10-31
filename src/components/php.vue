@@ -40,7 +40,7 @@
 				<van-col class="tree-index">
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-title">精英课程</van-row>
-						<van-row class="tree-index-line-subtitle"> 定期邀请来自bat，华为，中科院等专家一起探讨行业方向并进行深度技术交流和课程体系更新。 </van-row>
+						<van-row class="tree-index-line-subtitle"> 定期邀请来自BAT，华为，中科院等专家一起探讨行业方向并进行深度技术交流和课程体系更新。 </van-row>
 					</van-row>
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-subtitle2">讲师，班主任全程陪同学学习，把握每个学员的学习状态</van-row>
@@ -59,9 +59,10 @@
 			<!-- 老师 -->
 			<van-col class="teacher" type="flex" align="center">
 				<van-col class="tree-title">
-					<van-row class="php-title" style="margin-top:5.5%;">慧点Java讲师</van-row>
+					<van-row class="php-title" style="margin-top:5.5%;">慧点PHP讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -69,6 +70,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>
@@ -127,176 +129,5 @@ export default{
 </script>
 
 <style>
-.php{
-	display: flex;
-	flex-direction: column;
-}
-.php-index{
-	width: 100%;
-}
-.php-title{
-	font-size: 1.25rem;
-	color: #333333;
-	margin-top: 1.6875rem;
-}
-.php-subtitle{
-	font-size: 0.8rem;
-	color: #999999;
-	margin-top: 0.3125rem;
-}
-.php-buzou{
-	margin-top: 1.3125rem;
-	width: 100%;
-}
-.php-line{
-	width: 100%;
-	margin-bottom: 0.9375rem;
-}
-.php-line-index{
-	width: 44.67%;
-	background:rgba(255,255,255,1);
-	box-shadow:0px 0px 5px 0px rgba(19,24,126,0.15);
-	border-radius:4px;
-}
-.php-line-index-title{	
-	color: #333333;
-	font-size: 1rem;
-	font-weight: 500;
-}
-.php-line-index-subtitle{
-	width: 85.67%;
-	margin-bottom: 1.3125rem;
-	margin-top: 0.875rem;
-	color: #666666;
-	font-size: 0.85rem;
-	line-height: 1.125rem;
-	text-align: left;
-	font-weight: 400;
-}
-.php-img{
-	width: 42.39%;
-	margin-top: 0.9375rem;
-}
-.php-tree{
-	width: 100%;
-	background-color:#f5f6fd;
-}
-.tree-title{
-	width: 100%;
-}
-.tree-index{
-	width: 100%;
-	height: 79%;
-	background-image: url(../assets/tree.png);
-	background-size:contain;
-	background-repeat:no-repeat;
-	background-position:center;
-	margin-top: 5%;
-	margin-bottom:3%;
-}
-.tree-index-line{
-	width: 100%;
-	height: 25%;
-}
-.tree-index-line-title{
-	font-size:16px;
-	font-family:PingFang SC;
-	font-weight:500;
-	color:rgba(51,51,51,1);
-	line-height:12px;
-	margin-left: 11%;
-}
-.tree-index-line-subtitle{
-	width: 38%;
-	font-size: 0.85rem;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:18px;
-	text-align: left;
-	margin-right: 3%;
-}
-.tree-index-line-title2{
-	font-size:16px;
-	font-family:PingFang SC;
-	font-weight:500;
-	color:rgba(51,51,51,1);
-	line-height:12px;
-	margin-right: 11%;
-}
-.tree-index-line-subtitle2{
-	width: 38%;
-	font-size: 0.85rem;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:18px;
-	text-align: left;
-	margin-left: 5%;
-}
-.teacher{
-	width: 100%;
-}
-.teacher-line{
-	width: 96%;
-	margin-top: 5rem;
-	margin-bottom: 1.875rem;
-}
-.teacher-img{
-	width: 31%;
-}
-.teacher-index{
-	width: 69%;
-	background-color:#f5f6fd ;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.teacher-index-name{
-	font-size: 0.9375rem;
-	font-weight:400;
-	color:rgba(51,51,51,1);
-	line-height:1.9375rem;
-	margin-top: 3%;
-}
-.teacher-index-introduct{
-	width: 90%;
-	font-size:11px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
-.teacher-index-introduct1080p{
-	width: 90%;
-	font-size:13px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
-.teacherIndexIntroduct{
-	width: 90%;
-	font-size:11px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
-.teacherIndexIntroduct1080p{
-	width: 90%;
-	font-size:12px;
-	font-family:PingFang SC;
-	font-weight:400;
-	color:rgba(102,102,102,1);
-	line-height:17px;
-	margin-top: 3px;
-	text-align: left;
-}
+
 </style>

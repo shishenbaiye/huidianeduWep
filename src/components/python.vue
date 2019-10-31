@@ -52,7 +52,7 @@
 				<van-col class="tree-index">
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-title">精英课程</van-row>
-						<van-row class="tree-index-line-subtitle"> 定期邀请来自bat，华为，中科院等专家一起探讨行业方向并进行深度技术交流和课程体系更新。 </van-row>
+						<van-row class="tree-index-line-subtitle"> 定期邀请来自BAT，华为，中科院等专家一起探讨行业方向并进行深度技术交流和课程体系更新。 </van-row>
 					</van-row>
 					<van-row class="tree-index-line" type="flex" align="center" justify="space-between">
 						<van-row class="tree-index-line-subtitle2">慧点Python经验让他们更好把握每个</van-row>
@@ -74,6 +74,7 @@
 					<van-row class="php-title" style="margin-top:5.5%;">慧点Python大数据讲师</van-row>
 					<van-row class="php-subtitle">良好的环境是学员学有所成的基础</van-row>
 				</van-col>
+				<router-link to="/master">
 				<van-row class="teacher-line" type="flex">
 					<van-image class="teacher-img" :src="master.image"></van-image>
 					<van-col class="teacher-index">
@@ -81,6 +82,7 @@
 						<van-row v-bind:class="classFont">{{master.introduction}}</van-row>
 					</van-col>
 				</van-row>
+				</router-link>
 			</van-col>
 		</van-col>
 	</div>
@@ -126,7 +128,7 @@ export default{
 			api.$httpPOST("/master",{
 				position:3
 			}).then(res=>{
-				this.master=res.data[0];
+				this.master=res.data[1];
 			})
 		},
 	  name: 'python',
