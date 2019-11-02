@@ -1,4 +1,4 @@
-# default
+# 基于VUE-CLI+VANT的移动端webapp
 
 ## Project setup
 ```
