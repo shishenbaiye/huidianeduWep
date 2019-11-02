@@ -32,6 +32,14 @@
 			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
 			 @click='click_menu'>师资专家</van-button >
 		 </router-link>
+		 <router-link  to="/news">
+		 			 <van-button  
+		 			 class="popup-font" 
+		 			 justify="center" 
+		 			 align="center" 
+		 			 style="height: 3.5625rem;width: 100%;border-bottom: solid #E0E0E0 0.0625rem;font-size: 1.0625rem;"
+		 			 @click='click_menu'>就业报告</van-button >
+		 </router-link>
 		 <router-link  to="/java">
 			 <van-button  
 			 class="popup-font" 

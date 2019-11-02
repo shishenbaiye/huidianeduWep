@@ -8,6 +8,7 @@ import config from './lib/config'
 import axios from 'axios'
 import api from './api' 
 
+
 Vue.prototype.$http = axios
 Vue.use(config)
 Vue.use(Vant)
